@@ -2,3 +2,39 @@
 	margin: 0px;
 	padding: 0px;
 }
+body
+{
+	-webkit-box-pack: center;
+	background: #dfe3ee ;
+	
+}
+#top{
+	width: 1400px;
+	height: 43px;
+	-webkit-box-flex: 1;
+	background : #3b5998;
+	
+
+	
+}
+h1
+{
+	text-align: center;
+	font-family: Tahoma;
+ padding: 6px;
+	color: white;
+}
+#input{
+	 border: 10px solid #dfe3ee;
+	width: 500px;
+	height: 200px;
+	background-color : #ffffff;
+}
+h3
+{
+	border-bottom : 1px solid #3b5998;
+	text-align: center;
+	font-family: Tahoma;
+ padding: 6px;
+	color: #3b5998;
+}

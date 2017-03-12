@@ -42,15 +42,21 @@ h3
  padding: 6px;
 	color: #3b5998;
 }
-#output{
-	position: relative;
-	left: 845px;
-	bottom: 220px;
-	border: 10px solid #dfe3ee;
-	width: 500px;
+#img{
+	 border: 10px solid #dfe3ee;
+	width: 300px;
 	height: 200px;
 	background-color : #ffffff;
+	
 }
+
+#output{
+	border: 10px solid #dfe3ee;
+	width: 500px;
+	height: 400px;
+	background-color : #ffffff;
+}
+
 
 img{
 position: absolute;

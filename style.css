@@ -24,6 +24,10 @@ h1
  padding: 6px;
 	color: white;
 }
+#body{
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+}
 #input{
 	 border: 10px solid #dfe3ee;
 	width: 500px;
@@ -37,4 +41,11 @@ h3
 	font-family: Tahoma;
  padding: 6px;
 	color: #3b5998;
+}
+#output{
+	border: 10px solid #dfe3ee;
+	width: 500px;
+	height: 200px;
+	background-color : #ffffff;
+	
 }

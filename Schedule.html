@@ -9,10 +9,24 @@
 	<header id="top">
 		<h1>SCHEDULER</h1>
 	 </header>
-	<section>
+	<section id="body">
 	<div id="input">
-    <h3>ADD NEW TASK</h3>
+		<h3>ADD NEW TASK</h3><br>
+		<button onclick="schedule.createTable()">CREATE SCHEDULE</button><br>
+		<input type="text" id="task">
+		<button onclick="schedule.newRecord()">ADD TASK</button><br>
+            <button onclick="schedule.dropTable()">DELETE SCHEDULE</button>\
 	</div>
+	
+	<div id="output">
+		<p>The Current Schedule:</p> 
+            <ul class="record-list" id="db-results"></ul> 
+            <div id="db-log"></div> 
+	</div>
+            
+
 	</section>
+<body>
+<html>
 	
 	

@@ -43,9 +43,17 @@ h3
 	color: #3b5998;
 }
 #output{
+	position: relative;
+	left: 845px;
+	bottom: 220px;
 	border: 10px solid #dfe3ee;
 	width: 500px;
 	height: 200px;
 	background-color : #ffffff;
-	
+}
+
+img{
+position: absolute;
+top: 55px;
+left: 530px;
 }

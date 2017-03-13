@@ -17,8 +17,8 @@
                     for (var i = 0, item = null; i < result.rows.length; i++) {
                       item = result.rows.item(i);
                       document.getElementById('db-results').innerHTML += 
-                          '<li><span contenteditable="true" onkeyup="schedule.updateRecord('+item['id']+', this)">'+
-                          item['text'] + '</span> <a href="#" onclick="schedule.deleteRecord('+item['id']+')">[Delete]</a></li>';
+                          '<li><u><span contenteditable="true" onkeyup="schedule.updateRecord('+item['id']+', this)">'+
+                          item['text'] + '</span> <a href="#" onclick="schedule.deleteRecord('+item['id']+')">[Delete]</a></u></li>';
                     }
                   });
                 });

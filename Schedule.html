@@ -13,10 +13,11 @@
 	<section id="body">
 	<div id="input">
 		<h3>ADD NEW TASK</h3><br>
-		<button onclick="schedule.createTable()">CREATE SCHEDULE</button><br>
-		<input type="text" id="task">
-		<button onclick="schedule.newRecord()">ADD TASK</button><br>
-            <button onclick="schedule.dropTable()">DELETE SCHEDULE</button>
+		<button onclick="schedule.createTable()" class="submit">CREATE SCHEDULE</button><br><br>
+		<input type="text" id="task" placeholder="task & time" class="input">
+		
+		<button onclick="schedule.newRecord()" class="submit">ADD TASK</button><br><br>
+            <button onclick="schedule.dropTable()" class="submit">DELETE SCHEDULE</button>
 	</div>
 	<div id="img"
 	<img src = "schedule.bmp" height ="20px"  width = "30px" >
@@ -31,6 +32,8 @@
             
 
 	</section>
+	<footer>
+	</footer>
 <body>
 <html>
 	

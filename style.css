@@ -31,7 +31,7 @@ h1
 #input{
 	 border: 10px solid #dfe3ee;
 	width: 500px;
-	height: 200px;
+	height: 400px;
 	background-color : #ffffff;
 }
 h3
@@ -62,4 +62,25 @@ img{
 position: absolute;
 top: 55px;
 left: 530px;
+}
+.submit {
+	background-color: #00CCFF;
+	border: 1px solid black;
+	height: 40px;
+	width: 200px;
+	color: white;
+	font: bold 14px tahoma;
+	padding : 10px 10px;
+	
+}
+.input
+{
+	width : 250px;
+	height : 30px;
+	
+}
+#db-results{
+	 max-height: 150px;
+              overflow: auto;
+              text-align: left;
 }

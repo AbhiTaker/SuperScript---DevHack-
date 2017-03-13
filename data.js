@@ -26,7 +26,7 @@
 	function createTable() {
                 db.transaction(function(tx) {
                   tx.executeSql("CREATE TABLE Test (id REAL UNIQUE, text TEXT)", [],
-                      function(tx) {  log.innerHTML = '<p>New Schedule created!</p>' },
+                      function(tx) {  log.innerHTML = '<h4>New Schedule created!</h4>' },
                       onError);
                 });
               }
@@ -58,7 +58,7 @@
                   tx.executeSql("DROP TABLE Test", [],
                       function(tx) { 
 showRecords();
-log.innerHTML = '<p>Schedule Deleted !</p>' }, 
+log.innerHTML = '<h4>Schedule Deleted !</h4>' }, 
                       onError);
                 });
               }              

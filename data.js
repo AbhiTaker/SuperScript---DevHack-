@@ -13,19 +13,19 @@
 		function showRecords() {
                 document.getElementById('db-results').innerHTML = '';
                 db.transaction(function(tx) {
-                  tx.executeSql("SELECT * FROM Test", [], function(tx, result) {
+                  tx.executeSql("SELECT * FROM Task", [], function(tx, result) {
                     for (var i = 0, item = null; i < result.rows.length; i++) {
                       item = result.rows.item(i);
                       document.getElementById('db-results').innerHTML += 
-                          '<li><u><span contenteditable="true" onkeyup="schedule.updateRecord('+item['id']+', this)">'+
-                          item['text'] + '</span> <a href="#" onclick="schedule.deleteRecord('+item['id']+')">[Delete]</a></u></li>';
+                          '<li><span contenteditable="true" onkeyup="schedule.updateRecord('+item['id']+', this)">'+
+                          item['text'] + '</span> <a href="#" onclick="schedule.deleteRecord('+item['id']+')">[Delete]</a></li>';
                     }
                   });
                 });
 	}
 	function createTable() {
                 db.transaction(function(tx) {
-                  tx.executeSql("CREATE TABLE Test (id REAL UNIQUE, text TEXT)", [],
+                  tx.executeSql("CREATE TABLE Task (id REAL UNIQUE, text TEXT)", [],
                       function(tx) {  log.innerHTML = '<h4>New Schedule created!</h4>' },
                       onError);
                 });
@@ -33,7 +33,7 @@
                function newRecord() {
                 var num = Math.round(Math.random() * 10000); // random data
                 db.transaction(function(tx) {
-                  tx.executeSql("INSERT INTO Test (id, text) VALUES (?, ?)", [num, document.querySelector('#task').value],
+                  tx.executeSql("INSERT INTO Task (id, text) VALUES (?, ?)", [num, document.querySelector('#task').value],
                       function(tx, result) {
                         log.innerHTML = '';
                         showRecords();
@@ -43,22 +43,22 @@
               } 
               function updateRecord(id, textEl) {
                 db.transaction(function(tx) {
-                  tx.executeSql("UPDATE Test SET text = ? WHERE id = ?", [textEl.innerHTML, id], null, onError);
+                  tx.executeSql("UPDATE Task SET text = ? WHERE id = ?", [textEl.innerHTML, id], null, onError);
                 });
               } 
               function deleteRecord(id) {
                 db.transaction(function(tx) {
-                  tx.executeSql("DELETE FROM Test WHERE id=?", [id],
+                  tx.executeSql("DELETE FROM Task WHERE id=?", [id],
                       function(tx, result) { showRecords() }, 
                       onError);
                 });
               } 
               function dropTable() {
                 db.transaction(function(tx) {
-                  tx.executeSql("DROP TABLE Test", [],
+                  tx.executeSql("DROP TABLE Task", [],
                       function(tx) { 
-showRecords();
-log.innerHTML = '<h4>Schedule Deleted !</h4>' }, 
+                     showRecords();
+                  log.innerHTML = '<h4>Schedule Deleted !</h4>' }, 
                       onError);
                 });
               }              
